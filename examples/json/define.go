@@ -37,7 +37,6 @@ var DefString = dylexer.Define{
 	Regex:       `^".*"$`,
 	Consecutive: false,
 }
-
 var DefNumber = dylexer.Define{
 	Kind:        Number,
 	Regex:       `^-?[0-9\.]+$`,
