@@ -1,4 +1,4 @@
-package json
+package main
 
 import "github.com/x0y14/dylexer"
 
