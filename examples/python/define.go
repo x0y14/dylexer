@@ -33,6 +33,11 @@ var DefPeriod = dylexer.Define{
 	Regex:     `^\.$`,
 	AllowJoin: false,
 }
+var DefComma = dylexer.Define{
+	Kind:      Comma,
+	Regex:     `^,$`,
+	AllowJoin: false,
+}
 var DefLParent = dylexer.Define{
 	Kind:      LParenthesis,
 	Regex:     `^\($`,
@@ -51,6 +56,16 @@ var DefLSquare = dylexer.Define{
 var DefRSquare = dylexer.Define{
 	Kind:      RSquareBracket,
 	Regex:     `^\]$`,
+	AllowJoin: false,
+}
+var DefLCurly = dylexer.Define{
+	Kind:      LCurlyBracket,
+	Regex:     `^\{$`,
+	AllowJoin: false,
+}
+var DefRCurly = dylexer.Define{
+	Kind:      RCurlyBracket,
+	Regex:     `^\}$`,
 	AllowJoin: false,
 }
 var DefPlus = dylexer.Define{

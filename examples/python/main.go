@@ -21,10 +21,13 @@ func main() {
 
 		DefColon,   // :
 		DefPeriod,  // .
+		DefComma,   // ,
 		DefLParent, // (
 		DefRParent, // )
 		DefLSquare, // [
 		DefRSquare, // ]
+		DefLCurly,  // {
+		DefRCurly,  // }
 		DefPlus,    // +
 		DefMinus,   // -
 		DefStar,    // *

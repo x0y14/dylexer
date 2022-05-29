@@ -10,10 +10,13 @@ const (
 
 	Colon          // :
 	Period         // .
+	Comma          // ,
 	LParenthesis   // (
 	RParenthesis   // )
 	LSquareBracket // [
 	RSquareBracket // ]
+	LCurlyBracket  // {
+	RCurlyBracket  // }
 	Plus           // +
 	Minus          // -
 	Star           // *
@@ -43,10 +46,13 @@ var kinds = [...]string{
 
 	Colon:          "Colon",
 	Period:         "Period",
+	Comma:          "Comma",
 	LParenthesis:   "LParenthesis",
 	RParenthesis:   "RParenthesis",
 	LSquareBracket: "LSquareBracket",
 	RSquareBracket: "RSquareBracket",
+	LCurlyBracket:  "LCurlyBracket",
+	RCurlyBracket:  "RCurlyBracket",
 	Plus:           "Plus",
 	Minus:          "Minus",
 	Star:           "Star",
