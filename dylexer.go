@@ -62,7 +62,7 @@ func (l *Lexer) Tokenize(subject string) []Token {
 		}
 
 		if ok {
-			if !def.Consecutive {
+			if !def.AllowJoin {
 				//fmt.Printf("[%d-%d]%20s: %s\n", l.startPos, l.pos, l.tmp, def.Kind.String())
 				result = append(result, Token{
 					TokenKind: def.Kind,

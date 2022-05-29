@@ -1,7 +1,7 @@
 package dylexer
 
 type Define struct {
-	Kind        TokenKind
-	Regex       string
-	Consecutive bool
+	Kind      TokenKind
+	Regex     string
+	AllowJoin bool // when continuous
 }

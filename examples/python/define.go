@@ -3,140 +3,140 @@ package main
 import "github.com/x0y14/dylexer"
 
 var DefIllegal = dylexer.Define{
-	Kind:        Illegal,
-	Regex:       `0^`,
-	Consecutive: false,
+	Kind:      Illegal,
+	Regex:     `0^`,
+	AllowJoin: false,
 }
 var DefNewLine = dylexer.Define{
-	Kind:        NewLine,
-	Regex:       `^\n$`,
-	Consecutive: true,
+	Kind:      NewLine,
+	Regex:     `^\n$`,
+	AllowJoin: true,
 }
 var DefTab = dylexer.Define{
-	Kind:        Tab,
-	Regex:       `^\t$`,
-	Consecutive: true,
+	Kind:      Tab,
+	Regex:     `^\t$`,
+	AllowJoin: true,
 }
 var DefWhite = dylexer.Define{
-	Kind:        White,
-	Regex:       `^ $`,
-	Consecutive: true,
+	Kind:      White,
+	Regex:     `^ $`,
+	AllowJoin: true,
 }
 
 var DefColon = dylexer.Define{
-	Kind:        Colon,
-	Regex:       `^:$`,
-	Consecutive: false,
+	Kind:      Colon,
+	Regex:     `^:$`,
+	AllowJoin: false,
 }
 var DefPeriod = dylexer.Define{
-	Kind:        Period,
-	Regex:       `^\.$`,
-	Consecutive: false,
+	Kind:      Period,
+	Regex:     `^\.$`,
+	AllowJoin: false,
 }
 var DefLParent = dylexer.Define{
-	Kind:        LParenthesis,
-	Regex:       `^\($`,
-	Consecutive: false,
+	Kind:      LParenthesis,
+	Regex:     `^\($`,
+	AllowJoin: false,
 }
 var DefRParent = dylexer.Define{
-	Kind:        RParenthesis,
-	Regex:       `^\)$`,
-	Consecutive: false,
+	Kind:      RParenthesis,
+	Regex:     `^\)$`,
+	AllowJoin: false,
 }
 var DefLSquare = dylexer.Define{
-	Kind:        LSquareBracket,
-	Regex:       `^\[$`,
-	Consecutive: false,
+	Kind:      LSquareBracket,
+	Regex:     `^\[$`,
+	AllowJoin: false,
 }
 var DefRSquare = dylexer.Define{
-	Kind:        RSquareBracket,
-	Regex:       `^\]$`,
-	Consecutive: false,
+	Kind:      RSquareBracket,
+	Regex:     `^\]$`,
+	AllowJoin: false,
 }
 var DefPlus = dylexer.Define{
-	Kind:        Plus,
-	Regex:       `^\+$`,
-	Consecutive: false,
+	Kind:      Plus,
+	Regex:     `^\+$`,
+	AllowJoin: false,
 }
 var DefMinus = dylexer.Define{
-	Kind:        Minus,
-	Regex:       `^\-$`,
-	Consecutive: false,
+	Kind:      Minus,
+	Regex:     `^\-$`,
+	AllowJoin: false,
 }
 var DefStar = dylexer.Define{
-	Kind:        Star,
-	Regex:       `^\*$`,
-	Consecutive: false,
+	Kind:      Star,
+	Regex:     `^\*$`,
+	AllowJoin: false,
 }
 var DefAt = dylexer.Define{
-	Kind:        At,
-	Regex:       `^\@$`,
-	Consecutive: false,
+	Kind:      At,
+	Regex:     `^\@$`,
+	AllowJoin: false,
 }
 var DefSlash = dylexer.Define{
-	Kind:        Slash,
-	Regex:       `^\/$`,
-	Consecutive: false,
+	Kind:      Slash,
+	Regex:     `^\/$`,
+	AllowJoin: false,
 }
 var DefPercent = dylexer.Define{
-	Kind:        Percent,
-	Regex:       `^\%$`,
-	Consecutive: false,
+	Kind:      Percent,
+	Regex:     `^\%$`,
+	AllowJoin: false,
 }
 var DefEqual = dylexer.Define{
-	Kind:        Equal,
-	Regex:       `^\=$`,
-	Consecutive: false,
+	Kind:      Equal,
+	Regex:     `^\=$`,
+	AllowJoin: false,
 }
 
 var DefStringDq = dylexer.Define{
-	Kind:        StringDq,
-	Regex:       `^".*"$`,
-	Consecutive: false,
+	Kind:      StringDq,
+	Regex:     `^".*"$`,
+	AllowJoin: false,
 }
 var DefStringSq = dylexer.Define{
-	Kind:        StringSq,
-	Regex:       `^'.*'$`,
-	Consecutive: false,
+	Kind:      StringSq,
+	Regex:     `^'.*'$`,
+	AllowJoin: false,
 }
 var DefNumeric = dylexer.Define{
-	Kind:        Numeric,
-	Regex:       `^-?[0-9\.]+$`,
-	Consecutive: true,
+	Kind:      Numeric,
+	Regex:     `^-?[0-9\.]+$`,
+	AllowJoin: true,
 }
 var DefIdent = dylexer.Define{
-	Kind:        Ident,
-	Regex:       `^[A-Za-z_][A-Za-z0-9_]*$`,
-	Consecutive: true,
+	Kind:      Ident,
+	Regex:     `^[A-Za-z_][A-Za-z0-9_]*$`,
+	AllowJoin: true,
 }
 
 var DefFunctionDef = dylexer.Define{
-	Kind:        FunctionDef,
-	Regex:       `^def$`,
-	Consecutive: false,
+	Kind:      FunctionDef,
+	Regex:     `^def$`,
+	AllowJoin: false,
 }
 var DefClassDef = dylexer.Define{
-	Kind:        ClassDef,
-	Regex:       `^class$`,
-	Consecutive: false,
+	Kind:      ClassDef,
+	Regex:     `^class$`,
+	AllowJoin: false,
 }
 var DefImport = dylexer.Define{
-	Kind:        Import,
-	Regex:       `^import$`,
-	Consecutive: false,
+	Kind:      Import,
+	Regex:     `^import$`,
+	AllowJoin: false,
 }
 var DefNone = dylexer.Define{
-	Kind:        None,
-	Regex:       `^None$`,
-	Consecutive: false,
+	Kind:      None,
+	Regex:     `^None$`,
+	AllowJoin: false,
 }
 var DefTrue = dylexer.Define{
-	Kind:        True,
-	Regex:       `^True$`,
-	Consecutive: false,
+	Kind:      True,
+	Regex:     `^True$`,
+	AllowJoin: false,
 }
 var DefFalse = dylexer.Define{
-	Kind:        False,
-	Regex:       `^False$`,
-	Consecutive: false,
+	Kind:      False,
+	Regex:     `^False$`,
+	AllowJoin: false,
 }
