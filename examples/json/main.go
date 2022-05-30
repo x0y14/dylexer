@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/x0y14/dylexer"
+	"go.uber.org/zap"
 )
 
 func main() {
@@ -16,7 +17,11 @@ func main() {
 		DefString,
 		DefNumber,
 	}
-	lexer := dylexer.NewLexer(defines)
+	logger, err := zap.NewDevelopment()
+	if err != nil {
+		panic(err)
+	}
+	lexer := dylexer.NewLexer(*logger.Sugar(), defines)
 	if err := lexer.CompileRegex(); err != nil {
 		panic(err)
 	}

@@ -1,10 +1,12 @@
 package dylexer
 
 import (
+	"go.uber.org/zap"
 	"regexp"
 )
 
 type Lexer struct {
+	logger              zap.SugaredLogger
 	startPos            int
 	pos                 int
 	runes               []rune
@@ -16,8 +18,9 @@ type Lexer struct {
 	consecutiveKind     TokenKind
 }
 
-func NewLexer(defs []Define) *Lexer {
+func NewLexer(logger zap.SugaredLogger, defs []Define) *Lexer {
 	return &Lexer{
+		logger:              logger,
 		startPos:            0,
 		pos:                 0,
 		runes:               nil,
@@ -36,6 +39,7 @@ func (l *Lexer) CompileRegex() error {
 			return err
 		}
 		l.regex = append(l.regex, r)
+		l.logger.Debugf("compiled:%10v:%20v", def.Kind.String(), def.Regex)
 	}
 
 	return nil

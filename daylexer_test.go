@@ -1,6 +1,7 @@
 package dylexer
 
 import (
+	"go.uber.org/zap"
 	"testing"
 )
 
@@ -41,7 +42,11 @@ func TestLexer_Tokenize(t *testing.T) {
 		Regex: `^null$`,
 	})
 
-	lexer := NewLexer(defs)
+	logger, err := zap.NewDevelopment()
+	if err != nil {
+		t.Fatal(err)
+	}
+	lexer := NewLexer(*logger.Sugar(), defs)
 	if err := lexer.CompileRegex(); err != nil {
 		t.Fatal(err)
 	}
